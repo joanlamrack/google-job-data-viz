@@ -1,23 +1,24 @@
-body {
-	font-family: Sans-serif;
-	font-size: 11px;
-}
-
-.slice {
+.node {
 	cursor: pointer;
 }
 
-.slice .main-arc {
-	stroke: #fff;
-	stroke-width: 1px;
+.node:hover {
+	stroke: #000;
+	stroke-width: 1.5px;
 }
 
-.slice .hidden-arc {
-	fill: none;
+.node--leaf {
+	fill: white;
 }
 
-.slice text {
-	pointer-events: none;
-	dominant-baseline: middle;
+.label {
+	font: 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-anchor: middle;
+	text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+}
+
+.label,
+.node--root,
+.node--leaf {
+	pointer-events: none;
 }
